@@ -6,8 +6,8 @@ eye_cascade = cv2.CascadeClassifier('haarcascade_eye_tree_eyeglasses.xml')
 
 first_read = True
 url = 'http://192.168.43.91/capture'
-# cap = cv2.VideoCapture(0)
-# ret,img = cap.read()
+cap = cv2.VideoCapture(0)
+ret,img = cap.read()
 while True:
     img = io.imread(url)
     # ret,img = cap.read()
@@ -43,5 +43,5 @@ while True:
         first_read = False
 
 
-
+cap.release()
 cv2.destroyAllWindows()

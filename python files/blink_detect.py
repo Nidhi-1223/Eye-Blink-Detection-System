@@ -3,9 +3,10 @@ import numpy as np
 import cv2
 
 #Initializing the face and eye cascade classifiers from xml files
-face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-eye_cascade = cv2.CascadeClassifier('haarcascade_eye_tree_eyeglasses.xml')
+face_cascade = cv2.CascadeClassifier('/home/hp/Documents/College/Coding/Good Projects/Eye-blink-detection-system/python files/haarcascade_frontalface_default.xml')
+eye_cascade = cv2.CascadeClassifier('/home/hp/Documents/College/Coding/Good Projects/Eye-blink-detection-system/python files/haarcascade_eye_tree_eyeglasses.xml')
 
+print(face_cascade.empty())
 #Variable store execution state
 first_read = True
 

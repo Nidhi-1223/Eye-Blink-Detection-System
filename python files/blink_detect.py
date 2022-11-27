@@ -9,12 +9,14 @@ eye_cascade = cv2.CascadeClassifier('/home/hp/Documents/College/Coding/Good Proj
 print(face_cascade.empty())
 #Variable store execution state
 first_read = True
+# url = 'http://192.168.43.91/capture'  #uncomment when using ESP-32
 
 #Starting the video capture
 cap = cv2.VideoCapture(0)
 ret,img = cap.read()
 
 while(ret):
+    # img = io.imread(url)          #uncomment when using ESP-32
     ret,img = cap.read()
     #Coverting the recorded image to grayscale
     gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
